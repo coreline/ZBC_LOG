@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_LOG</CLSNAME>
+    <LANGU>R</LANGU>
+    <DESCRIPT>API для журнала приложений</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Добавить сообщение</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD_EXC</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Добавить исключение (с детализацией)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD_EXCEPTION</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Добавить исключение (из API журнала приложений)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD_FREE_TEXT</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Добавить сообщение из строки</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD_LOG</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Добавить сообщения из лога</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD_STRUCT</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Добавить структуру сообщения</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD_SYST</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Добавить сообщение из системной структуры SY</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD_TABLE</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Добавить таблицу с сообщениями</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHANGE</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Изменить сообщение</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHANGE_FROM_SYST</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Изменить сообщение из системной структуры SY</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_ERRORS</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Проверка на наличие ошибок</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CLEAR</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Очистить лог</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>COMMIT</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Commit work</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Конструктор лога сообщений</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DEL</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Удалить сообщение</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DISPLAY</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Отобразить сообщения</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>HAS_ERRORS</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Истина - если лог содерджит ошибки</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>HAS_MESSAGES</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Истина - если лог содерджит сообщения</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MODAL</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Вывод сообщений в модальном окне</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>NOTIFY</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Сигнализировать о наличии сообщений</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>POPUP</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Вывод сообщений в модальном окне (из API журнала приложений)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>READ</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Чтение сообщений из лога</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>READ_BAPIRET2</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Чтение сообщений из лога в формате BAPIRET2</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>READ_MSG</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Чтение сообщений из лога в формате BAL</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SAVE</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Сохранение сообщений в БД</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SEARCH</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Поиск сообщений</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SHOW</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Если сообщение 1 - через MESSAGE, если много - через POPUP</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

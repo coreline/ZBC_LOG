@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>API журнала приложений</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZBC_LOGF01</SOBJ_NAME>
+    <SOBJ_NAME>LZBC_LOGTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZBC_LOG</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_BC_LOG_ANY_VIEW</FUNCNAME>
+     <SHORT_TEXT>Отображение произвольных данных</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_DATA</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ANY</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_HASH</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>HASH160</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_FCAT</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>LVC_T_FCAT</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_DATA</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_HASH</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Хеш-значение (160 битов)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_FCAT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Каталог полей ListViewerControl</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_BC_LOG_DETAILS_VIEW</FUNCNAME>
+     <SHORT_TEXT>Отображение данных на основе ООП детализации</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>I_T_PARAMS</PARAMETER>
+       <TYP>BAL_T_PAR</TYP>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_T_PARAMS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Журнал приложений: таблица с именами и значениями параметр.</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_BC_LOG_DETAIL_ENTRY</FUNCNAME>
+     <SHORT_TEXT>Детализация вложения журнала приложений</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>I_T_PARAMS</PARAMETER>
+       <TYP>BAL_T_PAR</TYP>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_T_PARAMS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Журнал приложений: таблица с именами и значениями параметр.</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_BC_LOG_ELEM_VIEW</FUNCNAME>
+     <SHORT_TEXT>Отображение элементарных типов данных</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_DATA</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ANY</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_DATA</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_BC_LOG_EXCEPTION_VIEW</FUNCNAME>
+     <SHORT_TEXT>Отображение исключения</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>I_T_PARAMS</PARAMETER>
+       <TYP>BAL_T_PAR</TYP>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_T_PARAMS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Журнал приложений: таблица с именами и значениями параметр.</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_BC_LOG_GET_TAB_HASH</FUNCNAME>
+     <SHORT_TEXT>Возвращает ХЭШ данных вложений лога</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_LOGN</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BALOGNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_FCAT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>LVC_T_FCAT</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_HASH</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>HASH160</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_LOGN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Журнал приложений: номер журнала</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_FCAT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Каталог полей ListViewerControl</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_HASH</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Хеш-значение (160 битов)</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_BC_LOG_INSERT_ATTACHMENTS</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Добавление вложения в лог</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_NEW_TASK</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>FLAG</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IS_DATA</PARAMETER>
+       <TYP>ZTBC_LOG_DATA</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_NEW_TASK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Общий флаг</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IS_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Данные вложений журнала приложений</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_BC_LOG_STRUCT_VIEW</FUNCNAME>
+     <SHORT_TEXT>Отображение структуры в формате ALV</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_HASH</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>HASH160</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IS_DATA</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ANY</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_FCAT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>LVC_T_FCAT</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_HASH</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Хеш-значение (160 битов)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IS_DATA</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_FCAT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Каталог полей ListViewerControl</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_BC_LOG_TABLE_VIEW</FUNCNAME>
+     <SHORT_TEXT>Отображение таблиы ALV</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_HASH</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>HASH160</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_DATA</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>STANDARD TABLE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_FCAT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>LVC_T_FCAT</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_HASH</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Хеш-значение (160 битов)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_DATA</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_FCAT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Каталог полей ListViewerControl</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
