@@ -1,6 +1,6 @@
 # ZCL_LOG — Класс для ведения логов
 Ниже представляю описание класса для ведения логов
-![First image](https://abap4.ru/wp-content/uploads/2023/10/demo.png)
+![First image](https://raw.githubusercontent.com/coreline/ZBC_LOG/main/img/demo.png)
     
 # Создание экземпляра класса
 Ниже представлены основные варианты использования конструктора класса. Помимо приведенных вариантов в конструктор можно передать любые параметры структуры BAL_S_LOG. Описание параметров  [подробно описано в статье](https://abap4.ru/basis-application-log.html).
@@ -66,11 +66,11 @@
 ```
 
 Так будет выглядеть журнал сообщений
-![](https://abap4.ru/wp-content/uploads/2023/10/ex1.png)
+![](https://raw.githubusercontent.com/coreline/ZBC_LOG/main/img/ex1.png)
 При детализации первого сообщения (метод ADD_EXCEPTION) будет отображаться подробное сообщение
-![](https://abap4.ru/wp-content/uploads/2023/10/ex2.png)
+![](https://raw.githubusercontent.com/coreline/ZBC_LOG/main/img/ex2.png)
 При детализации второго (метод ADD_EXC) будет отображаться стек вызовов и место возникновения исключения. Можно будет провалиться в программу и строку где оно возникло.
-![](https://abap4.ru/wp-content/uploads/2023/10/ex3.png)
+![](https://raw.githubusercontent.com/coreline/ZBC_LOG/main/img/ex3.png)
 
 # Отображение сообщений
 Для отображения сообщений используется метод DISPLAY. Вывод сообщений реализуется через BAL_DSP_LOG_DISPLAY, для детальной настройки которого можно заполнить необязательный параметр IS_DISPLAY_PROFILE типа BAL_S_PROF. 
@@ -86,17 +86,17 @@
   ENDTRY.
   lo_log->display( ).
 ```
-![](https://abap4.ru/wp-content/uploads/2023/10/display.png)
+![](https://raw.githubusercontent.com/coreline/ZBC_LOG/main/img/display.png)
 Можно также выводить сообщения в модальном окне через метод POPUP. При этом, вызовется BAL_DSP_LOG_DISPLAY с профилем POPUP.
 ``` abap  ...
   lo_log->popup( ).
 ```
-![](https://abap4.ru/wp-content/uploads/2023/10/popup.png)
+![](https://raw.githubusercontent.com/coreline/ZBC_LOG/main/img/popup.png)
 Для просмотра сообщений через DISPLAY или POPUP у пользователя должны быть права на SLG1. Если их нет и нужно отобразить сообщения, можно воспользоваться методом MODAL. Данный метод использует функцию MESSAGES_SHOW, которая не требует никаких дополнительных прав. При этом, возможность детализации сообщений пропадет.
 ``` abap  ...
   lo_log->modal( ).
 ```
-![](https://abap4.ru/wp-content/uploads/2023/10/modal.png)
+![](https://raw.githubusercontent.com/coreline/ZBC_LOG/main/img/modal.png)
 
 # Сохранение и поиск сообщений из базы данных
 Для сохранения логов в БД необходимо использовать методы SAVE и COMMIT. Для поиска логов из БД следует использовать статичный метод SEARCH, который принимает на вход критерии выбора логов (структура типа BAL_S_LFIL) и возвращает инстанцию лога с найденными сообщениями.
@@ -131,9 +131,9 @@
   ENDDO.
   lo_log->popup( ).
 ```
-![](https://abap4.ru/wp-content/uploads/2023/10/cumulate.png)
+![](https://raw.githubusercontent.com/coreline/ZBC_LOG/main/img/cumulate.png)
 Если же IV_CUMULATE не передавать или передать в него значение ABAP_FALSE, то будут отображаться все сообщения.
-![](https://abap4.ru/wp-content/uploads/2023/10/no_cumulate.png)
+![](https://raw.githubusercontent.com/coreline/ZBC_LOG/main/img/no_cumulate.png)
 
 # Изменение и удаление и сообщений
 Любое сообщение имеет свой номер. Зная данный номер сообщение можно изменить или удалить. Пример ниже сначала добавляет сообщение, затем изменяет его и удаляет.
@@ -174,7 +174,7 @@
   MESSAGE e130(vg) INTO sy-msgli. " Документ проведен.
   NEW zcl_log( )->add_syst( is_context = ls_context )->popup( ).
 ```
-![](https://abap4.ru/wp-content/uploads/2023/10/context-1.png)
+![](https://raw.githubusercontent.com/coreline/ZBC_LOG/main/img/context.png)
 
 # Вложение данных к сообщению
 В каждом методе добавления сообщений есть необязательный параметр I_ATTACHMENT, который позволяет приложить к сообщению произвольные данные: значение, структура, таблица.
@@ -190,11 +190,11 @@
   lo_log->popup( ).
 ```
 При добавлении сообщения с параметром I_ATTACHMENT автоматически появится кнопка "Подробно", при нажатии на которую откроется программа отображения данных.
-![](https://abap4.ru/wp-content/uploads/2023/10/attachment.png)
+![](https://raw.githubusercontent.com/coreline/ZBC_LOG/main/img/attachment.png)
 Пример отображения вложенной таблицы 
-![](https://abap4.ru/wp-content/uploads/2023/10/table-1024x585.png)
+![](https://raw.githubusercontent.com/coreline/ZBC_LOG/main/img/table.png)
 Пример отображения вложенной структуры
-![](https://abap4.ru/wp-content/uploads/2023/10/struct.png)
+![](https://raw.githubusercontent.com/coreline/ZBC_LOG/main/img/struct.png)
 
 # Произвольная детализация сообщения
 Внутренняя механика детализации сообщения [описана в статье](https://abap4.ru/basis-application-log.html). Однако, на практике использовать ее можно только в процедурном стиле. Для ООП программирования детализацию сообщения можно сделать путем имплементации интерфейса ZIF_LOG_DETAILS
